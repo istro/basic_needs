@@ -2,4 +2,4 @@ www:
   type: ruby
   
 data:
-  type: mongo
+  type: mongodb
