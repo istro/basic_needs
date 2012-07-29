@@ -20,6 +20,7 @@ class RequestsController < ApplicationController
 		redirect_to requests_path
 	end
 
+	public
 	def update
 		@request = Requests.find(params[:id])
 

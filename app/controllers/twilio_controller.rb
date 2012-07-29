@@ -10,6 +10,8 @@ class TwilioController < ApplicationController
 
 		request = Requests.create({:message => body, :requester_number => from})
 
+		#Make me into an each.do of sorts or something better!
+
 		if find_food_tag(body)
 			food_tag = Tags.find_by_name("food")
 			if not food_tag
@@ -26,6 +28,16 @@ class TwilioController < ApplicationController
 			end
 
 			RequestTags.create({:request_id => request.id, :tags_id => shelter_tag.id})
+		end
+
+		zipcode = parse_zipcode(body)
+		if zipcode
+			area = Zipcode.find_by_zip(zipcode)
+			if not area
+				area = Zipcode.create(:zip => zipcode)
+			end
+
+			request.update_attributes(:zipcode_id => area.id)
 		end
 
 
@@ -62,4 +74,9 @@ class TwilioController < ApplicationController
  	    end
  	    return false
     end
+
+    def parse_zipcode(body)
+	  zipcode_array = body.scan(/\d\d\d\d\d+/)
+	  zipcode_array.first
+	end  
 end
