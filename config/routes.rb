@@ -1,6 +1,6 @@
 BasicNeeds::Application.routes.draw do
   resources :users
-  #resources :twilio
+  resources :twilio
   resources :requests
   
   # The priority is based upon order of creation:
