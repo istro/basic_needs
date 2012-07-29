@@ -1,5 +1,6 @@
 www:
-  type: ruby
-  
+  type: ruby  
+  postbuild: rake assets:precompile
+  postinstall: "rake db:create && rake db:migrate"
 data:
   type: mysql
