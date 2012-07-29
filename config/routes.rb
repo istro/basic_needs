@@ -3,6 +3,8 @@ BasicNeeds::Application.routes.draw do
   resources :twilio
   resources :requests
   
+  root :to => 'home'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
