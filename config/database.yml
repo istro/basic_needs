@@ -23,3 +23,7 @@ production:
   database: basic_needs_production
   pool: 5
   timeout: 5000
+  host: basicneeds-4ZHJNPGM.dotcloud.com
+  username: root
+  password: 8mlNxMsp8mtE8f4MT60a
+  port: 33307
