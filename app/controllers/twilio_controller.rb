@@ -45,16 +45,16 @@ class TwilioController < ApplicationController
 
 		#Currently sends to my number and Andrew's number
 		send_to = [from]
-		if not message.downcase.include?("noreply")
+		if not body.downcase.include?("noreply")
 
 			@response = Twilio::TwiML::Response.new do |r|
 				send_to.each do |s|
 					r.Sms 'Your message has been successfully uploaded.  To not receive these replies in the future, include "noreply" in your text.', :to => s
 				end
 		    end
+		
+		render :xml => @response.text, :layout => false
 		end
-
-	    render :xml => @response.text, :layout => false
 	end
 
 	def find_food_tag(message)
