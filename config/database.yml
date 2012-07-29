@@ -4,7 +4,7 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development:
-  adapter: postgresql
+  adapter: mysql2
   database: basic_needs_development  
   pool: 5
   timeout: 5000
@@ -13,17 +13,17 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  adapter: postgresql
+  adapter: mysql2
   database: basic_needs_test
   pool: 5
   timeout: 5000
 
 production:
-  adapter: postgresql
+  adapter: mysql2
   database: basic_needs_production
   pool: 5
   timeout: 5000
-  #host: basicneeds-4ZHJNPGM.dotcloud.com
-  #username: root
-  #password: 8mlNxMsp8mtE8f4MT60a
-  #port: 33307
+  host: basicneeds-4ZHJNPGM.dotcloud.com
+  username: root
+  password: 8mlNxMsp8mtE8f4MT60a
+  port: 33307

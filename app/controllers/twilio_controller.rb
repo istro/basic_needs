@@ -40,7 +40,7 @@ class TwilioController < ApplicationController
 
 				request.update_attributes(:zipcode_id => area.id)
 			end
-		end
+		
 
 
 		#Currently sends to my number and Andrew's number
@@ -53,7 +53,10 @@ class TwilioController < ApplicationController
 				end
 		    end
 		
+		request.update_attributes(:provider_number => '+12019257712')
+
 		render :xml => @response.text, :layout => false
+		end
 		end
 	end
 
@@ -80,7 +83,7 @@ class TwilioController < ApplicationController
     end
 
     def parse_zipcode(body)
-	  zipcode_array = body.scan(/\d\d\d\d\d+/)
+	  zipcode_array = body.scan(/\d{5}/)
 	  zipcode_array.first
 	end  
 end
