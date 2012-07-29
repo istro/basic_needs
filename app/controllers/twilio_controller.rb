@@ -4,10 +4,11 @@ class TwilioController < ApplicationController
 	end
 
 	def show
+		#Pull message and number from text
 		body = params["Body"]
 		from = params["From"]
 
-		body = "#{body}, sent by #{from}"
+		#Currently sends to my number and Andrew's number
 		send_to = ['+14154107907', '+12019257712']		
 
 		@response = Twilio::TwiML::Response.new do |r|
