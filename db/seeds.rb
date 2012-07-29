@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+purchased_numbers = ['+12013451095']
+
+purchased_numbers.each do |p|
+	if not TwilioNumber.find_by_number(p)
+		TwilioNumber.create(:number => p, :in_use => false)
+	end
+end
