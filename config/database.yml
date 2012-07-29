@@ -6,8 +6,6 @@
 development:
   adapter: mysql2
   database: basic_needs_development  
-  username: bn_user
-  password: passw0rd
   pool: 5
   timeout: 5000
 

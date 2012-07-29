@@ -23,7 +23,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'twilio-ruby'
 gem 'jquery-rails'
+gem 'activesupport', '>= 3.2.7'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
