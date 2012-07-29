@@ -8,6 +8,10 @@ development:
   database: basic_needs_development  
   pool: 5
   timeout: 5000
+  host: localhost
+  user: root
+  password: sadatuhat
+  socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -23,3 +27,7 @@ production:
   database: basic_needs_production
   pool: 5
   timeout: 5000
+  host: basicneeds-4ZHJNPGM.dotcloud.com
+  username: root
+  password: 8mlNxMsp8mtE8f4MT60a
+  port: 33307
