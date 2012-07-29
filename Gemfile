@@ -7,8 +7,7 @@ gem 'therubyracer'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem "mysql2", :group => :development
-gem "pg", :group => :production
+gem "pg"
 
 gem "haml"
 
