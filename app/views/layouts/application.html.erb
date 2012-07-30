@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BasicNeeds</title>
+  <title>Needs</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+	<script>$('#myModal').modal()</script>
 </head>
 <body>
 
-<%= yield %>
+	<div class="modal hide" id="myModal">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal">×</button>
+	    <h3>You're awesome!</h3>
+	  </div>
+	  <div class="modal-body">
+	    <p>Thanks for offering help!</p>
+			<p>Get in touch with the person you're helping with the following number:</p>
+			<div class="phone-number">415-552-5466</div>
+	  </div>
+	  <div class="modal-footer">
+	    <a href="#" class="btn" data-dismiss="modal">Close</a>
+	  </div>
+	</div>
+
+
+<header>
+	<h1><%= image_tag('needsio-logo.png') %><span>/ 94113</span></h1>
+</header>
+
+<div id="container">
+	<%= yield %>
+</div>
+
+<footer>
+
+</footer>
 
 </body>
 </html>

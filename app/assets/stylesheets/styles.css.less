@@ -1,11 +1,9 @@
 .no-rm { margin-right:0; }
-
-@import "grid.css.less";
-
 // -- colors
 @shelterColor:#77c4d3;
 @foodColor:#c4f792;
 @healthColor:#ea2e49;
+@miscColor:#79819c;
 
 
 body {
@@ -15,14 +13,22 @@ body {
 }
 
 header {
+	height:72px;
 	line-height:89px;
 	padding:21px 0;
 	text-shadow:0 1px #fff;
 	text-indent:34px;
 	width:100%;
+	img {
+		height:89px;
+		position:absolute;
+		top:13px;
+	}
 	span {
 		color:#7a7a7a;
-		font-size:21px;
+		font-size:34px;
+		line-height:89px;
+		margin-left:320px;
 	}
 }
 
@@ -42,7 +48,7 @@ header {
 	border-radius:5px; 
 	position:relative;
 	margin-right:1.27%;
-	margin-bottom:1.27%;
+	margin-bottom:2%;
 	float:left;
 //	width:31.914893614%;
 	
@@ -60,9 +66,9 @@ header {
 				padding:0;
 				.msg_body { 
 					clear:both; 
-					font-size:18px;
+					font-size:21px;
 					line-height:24px;
-					padding:24px 13px;
+					padding:28px 24px;
 					sup {
 						color:#939393;
 						font-size:11px;
@@ -88,7 +94,7 @@ header {
 	&:hover {
 		.wrap { 
 			background:#fff;
-			.body .wrap .msg_body { padding:20px 13px;}
+			.body .wrap .msg_body { padding:24px 24px;}
 		}
 		.tags .tag {
 			font-size:28px;
@@ -98,7 +104,7 @@ header {
 	&.food { border-top:2px solid @foodColor; }
 	&.shelter { border-top:2px solid @shelterColor; }
 	&.health { border-top:2px solid @healthColor; }
-
+	&.misc { border-top:2px solid @miscColor; }
 }
 
 .tags {
@@ -113,6 +119,7 @@ header {
 		&.food { background: @foodColor; }
 		&.shelter { background: @shelterColor; }
 		&.health { background: @healthColor; }
+		&.misc { background:@miscColor; }
 	}
 }
 
@@ -190,3 +197,13 @@ body.bw720 {
 	}
 }
 
+.phone-number {
+	background:@miscColor;
+	color:#fff;
+	font-weight:bold;
+	font-size:21px;
+	padding:8px;
+	width:75%;
+	margin:0 auto;
+	text-align:center;
+}

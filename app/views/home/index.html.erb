@@ -1,20 +1,42 @@
 <div id="needs">
+	<% Requests.all.reverse.each do |r| %>
+		<div class="need food">
+			<div class="wrap">
+				<div class="tags">
+					<div class="food tag"><i class="icon-shopping-cart"></i></div>
+				</div>
+				<div class="body">
+					<div class="wrap">
+						<div class="msg_body">
+							<p><%= r.message %></p>
+							<sup>10:33am on Friday, July 24</sup>
+						</div>
+					</div>
+				</div>
+				<div class="actions">
+					<button class="claim_btn" data-toggle="modal" href="#myModal" >I got this.</button>
+					
+				</div>
+			</div>
+		</div>
+	<% end %>
+			
 	<div class="need food">
 		<div class="wrap">
 			<div class="tags">
-				<div class="food tag"><i class="icon-shopping-cart"></i></div>
+				<div class="health tag"><i class="icon-heart"></i></div>
 			</div>
 			<div class="body">
 				<div class="wrap">
 					<div class="msg_body">
-						<p>l;kajsd;flkj a;lskdjf asdfkj a l;kajsd;flkj a;lskdjf asdfkj a l;kajsd;flkj a;lskdjf asdfkj a l;kajsd;flkj a;lskdjf asdfkj a</p>
+						<p>My son is sick and need medical assistance in 94103</p>
 						<sup>10:33am on Friday, July 24</sup>
 					</div>
 				</div>
 			</div>
 			<div class="actions">
 <!--				<a class="claim_btn" href="/path/to/your/page.html" data-toggle="modal" data-target="#myModal">I got this.</a>-->
-				<button class="claim_btn">I got this.</button>
+				<button class="claim_btn" data-toggle="modal" href="#myModal" >I got this.</button>
 			</div>
 		</div>
 	</div>
@@ -26,33 +48,91 @@
 			<div class="body">
 				<div class="wrap">
 					<div class="msg_body">
-						<p>l;kajsd;flkj a;lskdjf asdfkj a l;kajsd;flkj a;lskdjf asdfkj a l;kajsd;flkj a;lskdjf asdfkj a l;kajsd;flkj a;lskdjf asdfkj a</p>
+						<p>Food stamps ran out for the month, please help 94117</p>
 						<sup>10:33am on Friday, July 24</sup>
 					</div>
 				</div>
 			</div>
 			<div class="actions">
 <!--				<a class="claim_btn" href="/path/to/your/page.html" data-toggle="modal" data-target="#myModal">I got this.</a>-->
-				<button class="claim_btn">I got this.</button>
+				<button class="claim_btn" data-toggle="modal" href="#myModal" >I got this.</button>
 			</div>
 		</div>
 	</div>
-	<div class="need food">
+	<div class="need misc">
 		<div class="wrap">
 			<div class="tags">
+				<div class="misc tag"><i class="icon-asterisk"></i></div>
+			</div>
+			<div class="body">
+				<div class="wrap">
+					<div class="msg_body">
+						<p>Looking for construction work in 94121</p>
+						<sup>10:33am on Friday, July 24</sup>
+					</div>
+				</div>
+			</div>
+			<div class="actions">
+<!--				<a class="claim_btn" href="/path/to/your/page.html" data-toggle="modal" data-target="#myModal">I got this.</a>-->
+				<button class="claim_btn" data-toggle="modal" href="#myModal" >I got this.</button>
+			</div>
+		</div>
+	</div>
+	<div class="need shelter">
+		<div class="wrap">
+			<div class="tags">
+				<div class="shelter tag"><i class="icon-home"></i></div>
+			</div>
+			<div class="body">
+				<div class="wrap">
+					<div class="msg_body">
+						<p>Landlord evicted me and three kids, looking for shelter in 94110</p>
+						<sup>10:33am on Friday, July 24</sup>
+					</div>
+				</div>
+			</div>
+			<div class="actions">
+<!--				<a class="claim_btn" href="/path/to/your/page.html" data-toggle="modal" data-target="#myModal">I got this.</a>-->
+				<button class="claim_btn" data-toggle="modal" href="#myModal" >I got this.</button>
+			</div>
+		</div>
+	</div>
+	<div class="need misc">
+		<div class="wrap">
+			<div class="tags">
+				<div class="misc tag"><i class="icon-asterisk"></i></div>
+			</div>
+			<div class="body">
+				<div class="wrap">
+					<div class="msg_body">
+						<p>Need ride to job interview in 94117</p>
+						<sup>10:33am on Friday, July 24</sup>
+					</div>
+				</div>
+			</div>
+			<div class="actions">
+<!--				<a class="claim_btn" href="/path/to/your/page.html" data-toggle="modal" data-target="#myModal">I got this.</a>-->
+				<button class="claim_btn" data-toggle="modal" href="#myModal" >I got this.</button>
+			</div>
+		</div>
+	</div>
+	<div class="need shelter">
+		<div class="wrap">
+			<div class="tags">
+				<div class="shelter tag"><i class="icon-home"></i></div>
 				<div class="food tag"><i class="icon-shopping-cart"></i></div>
 			</div>
 			<div class="body">
 				<div class="wrap">
 					<div class="msg_body">
-						<p>l;kajsd;flkj a;lskdjf asdfkj a l;kajsd;flkj a;lskdjf asdfkj a l;kajsd;flkj a;lskdjf asdfkj a l;kajsd;flkj a;lskdjf asdfkj a</p>
+						<p>Passing through SF, need to be picked up at Greyhound station and a place to stay.</p>
 						<sup>10:33am on Friday, July 24</sup>
 					</div>
 				</div>
 			</div>
 			<div class="actions">
 <!--				<a class="claim_btn" href="/path/to/your/page.html" data-toggle="modal" data-target="#myModal">I got this.</a>-->
-				<button class="claim_btn">I got this.</button>
+				<button class="claim_btn" data-toggle="modal" href="#myModal" >I got this.</button>
 			</div>
 		</div>
 	</div>
@@ -61,10 +141,18 @@
 			<div class="tags">
 				<div class="health tag"><i class="icon-heart"></i></div>
 				<div class="shelter tag"><i class="icon-home"></i></div>
-				<div class="food tag"><i class="icon-shopping-cart"></i></div>
 			</div>
 			<div class="body">
-				
+				<div class="wrap">
+					<div class="msg_body">
+						<p>Feeling sick. Can't leave house. please bring stomach meds</p>
+						<sup>10:33am on Friday, July 24</sup>
+					</div>
+				</div>
+			</div>
+			<div class="actions">
+<!--				<a class="claim_btn" href="/path/to/your/page.html" data-toggle="modal" data-target="#myModal">I got this.</a>-->
+				<button class="claim_btn" data-toggle="modal" href="#myModal" >I got this.</button>
 			</div>
 		</div>
 	</div>
@@ -72,42 +160,77 @@
 		<div class="wrap">
 			<div class="tags">
 				<div class="food tag"><i class="icon-shopping-cart"></i></div>
+			</div>
+			<div class="body">
+				<div class="wrap">
+					<div class="msg_body">
+						<p>My son is sick and need medical assistance in 94103</p>
+						<sup>10:33am on Friday, July 24</sup>
+					</div>
+				</div>
+			</div>
+			<div class="actions">
+<!--				<a class="claim_btn" href="/path/to/your/page.html" data-toggle="modal" data-target="#myModal">I got this.</a>-->
+				<button class="claim_btn" data-toggle="modal" href="#myModal" >I got this.</button>
+			</div>
+		</div>
+	</div>
+	<div class="need misc">
+		<div class="wrap">
+			<div class="tags">
+				<div class="misc tag"><i class="icon-asterisk"></i></div>
+			</div>
+			<div class="body">
+				<div class="wrap">
+					<div class="msg_body">
+						<p>Need ride to job interview in 94117</p>
+						<sup>10:33am on Friday, July 24</sup>
+					</div>
+				</div>
+			</div>
+			<div class="actions">
+<!--				<a class="claim_btn" href="/path/to/your/page.html" data-toggle="modal" data-target="#myModal">I got this.</a>-->
+				<button class="claim_btn" data-toggle="modal" href="#myModal" >I got this.</button>
+			</div>
+		</div>
+	</div>
+	<div class="need shelter">
+		<div class="wrap">
+			<div class="tags">
+				<div class="shelter tag"><i class="icon-home"></i></div>
+				<div class="food tag"><i class="icon-shopping-cart"></i></div>
+			</div>
+			<div class="body">
+				<div class="wrap">
+					<div class="msg_body">
+						<p>Passing through SF, need to be picked up at Greyhound station and a place to stay and some food tonight.</p>
+						<sup>10:33am on Friday, July 24</sup>
+					</div>
+				</div>
+			</div>
+			<div class="actions">
+<!--				<a class="claim_btn" href="/path/to/your/page.html" data-toggle="modal" data-target="#myModal">I got this.</a>-->
+				<button class="claim_btn" data-toggle="modal" href="#myModal" >I got this.</button>
+			</div>
+		</div>
+	</div>
+	<div class="need health">
+		<div class="wrap">
+			<div class="tags">
 				<div class="health tag"><i class="icon-heart"></i></div>
+				<div class="shelter tag"><i class="icon-home"></i></div>
 			</div>
 			<div class="body">
-				
+				<div class="wrap">
+					<div class="msg_body">
+						<p>Feeling sick. Can't leave house. please bring stomach meds</p>
+						<sup>10:33am on Friday, July 24</sup>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-	<div class="need food">
-		<div class="wrap">
-			<div class="tags">
-				<div class="food tag"><i class="icon-shopping-cart"></i></div>
-			</div>
-			<div class="body">
-				
-			</div>
-		</div>
-	</div>
-
-	<div class="need">
-		<div class="wrap">
-			<div class="body">
-				
-			</div>
-		</div>
-	</div>
-	<div class="need">
-		<div class="wrap">
-			<div class="body">
-				
-			</div>
-		</div>
-	</div>
-	<div class="need">
-		<div class="wrap">
-			<div class="body">
-				
+			<div class="actions">
+<!--				<a class="claim_btn" href="/path/to/your/page.html" data-toggle="modal" data-target="#myModal">I got this.</a>-->
+				<button class="claim_btn" data-toggle="modal" href="#myModal" >I got this.</button>
 			</div>
 		</div>
 	</div>
