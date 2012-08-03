@@ -13,3 +13,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+
+.powder
+.powrc
+.sass-cache/
+/app/.DS_Store
