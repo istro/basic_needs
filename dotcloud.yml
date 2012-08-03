@@ -1,6 +1,8 @@
 www:
-  type: ruby  
-  postbuild: rake assets:precompile
-  postinstall: "rake db:create && rake db:migrate"
-data:
-  type: mysql
+  type: ruby
+  exclude_bundler_groups:
+    - development  
+  postbuild: "rake assets:precompile"
+  postinstall: bash postinstall.sh
+db:
+  type: postgresql

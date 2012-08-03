@@ -11,7 +11,6 @@ class TwilioController < ApplicationController
 		request = Requests.create({:message => body, :requester_number => from})
 
 		#Make me into an each.do of sorts or something better!
-
 		if find_food_tag(body)
 			food_tag = Tags.find_by_name("food")
 			if not food_tag
