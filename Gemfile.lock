@@ -121,7 +121,7 @@ DEPENDENCIES
   jquery-rails
   less
   less-rails
-  mysql2
+  pg
   rails (= 3.2.7)
   therubyracer
   twilio-ruby
